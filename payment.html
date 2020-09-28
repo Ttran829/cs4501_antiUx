@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MUHAHAHA</title>
+        <link rel='stylesheet' href='styles.css' type='text/css' />
+    </head>
+    <body>
+        <div class = "row">
+            <div class="column">
+                <img src="adweek.png" style="width:100%">
+            </div>
+            <div class="column">
+                <img src="mcdonalds.jpg" style="width: 100%">
+            </div>
+            <div class="column">
+                <img src="coupon.png" style="width: 100%">
+            </div>
+            <div class="column">
+                <img src="ring .jpg" style="width: 100%">
+            </div>
+        </div>
+        <div>
+          <input type="submit" value="SUBMIT" class="btn1" onclick="z()"><span id="err"></span> 
+      </div>
+        <div>
+          <a href = "delivery.html">
+            <input type="submit" value="BACKWARD" class="btn1">
+          </a>  
+        </div>
+        
+
+        <div class="row">
+            <div class="col-75">
+              <div class="container">
+                <form action="/action_page.php">
+
+                  <div class="row">
+                    <div class="col-50">
+                      <h2>INFORMATION OF PAYMENT</h2>
+                      <label for="promo"></label>
+                      <input type="text" id="promo" name="promocode" placeholder="PLEASE ENTER PROMO CODE" required>
+                      <label for="ccnum"></label>
+                      <input type="text" id="ccnum" name="cardnumber" placeholder="PLEASE ENTER YOUR CREDIT CARD NUMBER">
+                      <label for="expyear"></label>
+                      <input type="text" id="expyear" name="expyear" placeholder="PLEASE ENTER EXPIRATION YEAR: WRITE OUT FULL YEAR">
+                      <label for="expmonth"></label>
+                      <input type="text" id="expmonth" name="expmonth" placeholder="PLEASE ENTER EXPIRATION MONTH: SPELL OUT">
+                      <div class="row">
+                      <label for="rccnum"></label>
+                      <input type="text" id="rccnum" name="recardnumber" placeholder="PLEASE REENTER CREDIT CARD NUMBER">
+                        <div class="col-50">
+                            <label for="cname"></label>
+                            <input type="text" id="cname" name="cardname" placeholder="PLEASE ENTER YOUR NAME IN THIS FORMAT: LAST, FIRST, MIDDLE">
+                        </div>
+                        <div class="col-50">
+                          <label for="cvv"></label>
+                          <input type="text" id="cvv" name="cvv" placeholder="PLEASE ENTER YOUR CVV">
+                        </div>
+                      </div>
+                      
+                    </div>
+                    
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div>
+              <a href = "payment.html">
+                <input type="submit" value="START OVER" class="btn">
+              </a>
+            </div>
+            <div class="col-25">
+              <div class="container">
+                <h4>Cart <span class="price" style="color:yellow"><i class="fa fa-shopping-cart"></i> </span></h4>
+                <p><a href="#">Product 1</a> <span class="price">$15</span></p>
+                <p><a href="#">Product 2</a> <span class="price">$5</span></p>
+                <hr>
+                <p>Total <span class="price" style="color:yellow"><b>$30</b></span></p>
+              </div>
+            </div>
+          </div>
+    </body>
+</html>   
+<script>
+  function z()
+  {
+  var a=document.getElementById("promo");
+  if(a.value=="123ABLE3412")
+  {
+  location.replace("congrats.html");
+  }
+  else
+  {
+  document.getElementById('err').innerHTML="<br>Please enter a promo code";
+  }
+  
+  }
+</script>     
