@@ -1,5 +1,5 @@
 p {
-	color: yellow;
+	color: lightblue;
 	text-align: right;
 	font-size: 15px;
 }
@@ -12,7 +12,7 @@ body {
 }
 
 ul {
-	color: yellow;
+	color: lightblue;
 	list-style: none;
 }
 
@@ -23,7 +23,7 @@ h1 {
 }
 
 h2,h4,a {
-	color:yellow;
+	color:lightblue;
 }
 
 img {
@@ -86,12 +86,12 @@ a {
   label {
 	margin-bottom: 10px;
 	display: block;
-	color: yellow;
+	color: lightblue;
   }
 
 span.price {
 	float: left;
-	color: yellow;
+	color: lightblue;
   }
 
 .btn {
@@ -124,7 +124,7 @@ span.price {
 
 .btn2{
 	background-color: white;
-	color: yellow;
+	color: lightblue;
 	padding: 5px;
 	margin: 20px 0;
 	border: none;
@@ -138,7 +138,7 @@ span.price {
 
 .btn3{
 	background-color: white;
-	color: yellow;
+	color: lightblue;
 	padding: 5px;
 	margin: 20px 500px;
 	border: none;
