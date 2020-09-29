@@ -36,21 +36,21 @@
                       <label for="promo"></label>
                       <input type="text" id="promo" name="promocode" placeholder="PLEASE ENTER PROMO CODE" required>
                       <label for="ccnum"></label>
-                      <input type="text" id="ccnum" name="cardnumber" placeholder="PLEASE ENTER YOUR CREDIT CARD NUMBER">
+                      <input type="text" id="ccnum" name="cardnumber" placeholder="PLEASE ENTER YOUR CREDIT CARD NUMBER" required>
                       <label for="expyear"></label>
-                      <input type="text" id="expyear" name="expyear" placeholder="PLEASE ENTER EXPIRATION YEAR: WRITE OUT FULL YEAR">
+                      <input type="text" id="expyear" name="expyear" placeholder="PLEASE ENTER EXPIRATION YEAR: WRITE OUT FULL YEAR" required>
                       <label for="expmonth"></label>
-                      <input type="text" id="expmonth" name="expmonth" placeholder="PLEASE ENTER EXPIRATION MONTH: SPELL OUT">
+                      <input type="text" id="expmonth" name="expmonth" placeholder="PLEASE ENTER EXPIRATION MONTH: SPELL OUT" required>
                       <div class="row">
                       <label for="rccnum"></label>
-                      <input type="text" id="rccnum" name="recardnumber" placeholder="PLEASE REENTER CREDIT CARD NUMBER">
+                      <input type="text" id="rccnum" name="recardnumber" placeholder="PLEASE REENTER CREDIT CARD NUMBER" required>
                         <div class="col-50">
                             <label for="cname"></label>
-                            <input type="text" id="cname" name="cardname" placeholder="PLEASE ENTER YOUR NAME IN THIS FORMAT: LAST, FIRST, MIDDLE">
+                            <input type="text" id="cname" name="cardname" placeholder="PLEASE ENTER YOUR NAME IN THIS FORMAT: LAST, FIRST, MIDDLE" required>
                         </div>
                         <div class="col-50">
                           <label for="cvv"></label>
-                          <input type="text" id="cvv" name="cvv" placeholder="PLEASE ENTER YOUR CVV">
+                          <input type="text" id="cvv" name="cvv" placeholder="PLEASE ENTER YOUR CVV" required>
                         </div>
                       </div>
                       
@@ -69,8 +69,9 @@
             <div class="col-25">
               <div class="container">
                 <h4>Cart <span class="price" style="color:lightblue"><i class="fa fa-shopping-cart"></i> </span></h4>
-                <p><a href="#">Product 1</a> <span class="price">$15</span></p>
-                <p><a href="#">Product 2</a> <span class="price">$5</span></p>
+                <p><a href="#">Product 1</a></p>
+                <p><a href="#">Product 2</a></p>
+                <p><a href="#">Shipping Cost</a></p>
                 <hr>
                 <p>Total <span class="price" style="color:lightblue"><b>$30</b></span></p>
               </div>
@@ -87,14 +88,18 @@
   function z()
   {
   var a=document.getElementById("promo");
-  if(a.value=="123ABLE3412")
-  {
-  location.replace("congrats.html");
+  var b=document.getElementById("ccnum");
+  var c=document.getElementById("expyear");
+  var d=document.getElementById("expmonth");
+  var e=document.getElementById("rccnum");
+  var f=document.getElementById("cname");
+  var g=document.getElementById("cvv");
+
+  if(a.value=="123ABLE3412" && b.value != "" && c.value != "" && d.value != "" && e.value != "" && e.value == b.value && f.value != "" && g.value != ""){
+    location.replace("congrats.html");
   }
-  else
-  {
-  document.getElementById('err').innerHTML="<br>Please enter a promo code";
+  else{
+    document.getElementById('err').innerHTML="<br>Please enter the promo code and other needed information";
   }
-  
   }
 </script>     
